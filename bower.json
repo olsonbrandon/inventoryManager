@@ -1,0 +1,20 @@
+{
+  "name": "appseed",
+  "description": "template for angularJS projects with two working views/gulp/bower/npm",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "https://github.com/olsonbrandon/appSeed",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-ui-router": "^0.3.2"
+  }
+}
