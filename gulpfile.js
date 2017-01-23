@@ -25,6 +25,16 @@
     .pipe(gulp.dest('dist/'));
   });
 
+  gulp.task('concatCss', function(){
+      return gulp.src([
+          'src/*.css',
+          'src/js/components/**/*.css'
+      ])
+      .pipe(plumber())
+      .pipe(concat('app.css'))
+      .pipe(gulp.dest('dist/'));
+  });
+
   // gulp.task('uglifyScripts', ['concatScripts'], function(){
   //   return gulp.src('dist/app.js')
   //   .pipe(uglify())
@@ -32,13 +42,13 @@
   //   .pipe(gulp.dest('dist/'));
   // });
 
-  gulp.task('compileSass', function(){
-    return gulp.src('src/scss/application.scss')
-    .pipe(maps.init())
-    .pipe(sass())
-    .pipe(maps.write('./'))
-    .pipe(gulp.dest('src/css'));
-  });
+  // gulp.task('compileSass', function(){
+  //   return gulp.src('src/scss/application.scss')
+  //   .pipe(maps.init())
+  //   .pipe(sass())
+  //   .pipe(maps.write('./'))
+  //   .pipe(gulp.dest('src/css'));
+  // });
 
   gulp.task('moveIndex', function(){
     return gulp.src('src/index.html')
@@ -46,14 +56,19 @@
   });
 
   gulp.task('moveHtml', function(){
-    return gulp.src('src/views/*.html')
+    return gulp.src(['src/views/*.html','src/js/components/**/*.html'])
     .pipe(gulp.dest('./dist/views'));
   });
 
-  gulp.task('moveCss', function(){
-    return gulp.src('src/css/styles.css')
-    .pipe(gulp.dest('dist/css'));
-  });
+  // gulp.task('moveCss', function(){
+  //   return gulp.src('src/styles.css')
+  //   .pipe(gulp.dest('dist/'));
+  // });
+
+  // gulp.task('moveComponentsCss', function(){
+  //   return gulp.src('src/js/components/**/*.css')
+  //   .pipe(gulp.dest('dist/views'));
+  // });
 
   gulp.task('webserver', function(){
     return gulp.src('dist')
@@ -71,10 +86,10 @@
   });
 
   gulp.task('watch', function(){
-    gulp.watch(['src/js/*.js', 'src/js/**/*.js', 'src/scss/**.scss', 'src/css/*.css', 'src/index.html', 'src/views/*.html'], ['concatScripts','compileSass','moveCss','moveHtml','moveIndex']);
+    gulp.watch(['src/js/*.js', 'src/js/**/*.js', 'src/*.css', 'src/index.html', 'src/views/*.html','src/js/components/**/*.html','src/js/components/**/*.css'], ['concatScripts','moveHtml','moveIndex','concatCss']);
   });
 
-  gulp.task('build', ['concatScripts','clearTempJs', 'compileSass', 'moveCss', 'moveHtml', 'moveIndex', 'watch']);
+  gulp.task('build', ['concatScripts','clearTempJs', 'moveHtml', 'moveIndex','concatCss', 'watch']);
 
   gulp.task('default', ['build', 'webserver']);
 }());

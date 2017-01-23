@@ -1,4 +1,5 @@
 (function() {
     'use strict';
-    angular.module('MyApp', ['ui.router']);
+    angular.module('InventoryManager', ['ui.router','ngStorage'])
+    .constant('ServerUrl','http://wta-inventorybackend.herokuapp.com/api/v1');
 }());

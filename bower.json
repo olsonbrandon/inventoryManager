@@ -1,9 +1,9 @@
 {
-  "name": "appseed",
-  "description": "template for angularJS projects with two working views/gulp/bower/npm",
+  "name": "inventoryManager",
+  "description": "inventory manager for an e-commerce website.",
   "main": "index.js",
   "license": "ISC",
-  "homepage": "https://github.com/olsonbrandon/appSeed",
+  "homepage": "http://github.com/olsonbrandon/inventoryManager",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,6 +15,7 @@
   "devDependencies": {},
   "dependencies": {
     "angular": "^1.5.9",
-    "angular-ui-router": "^0.3.2"
+    "angular-ui-router": "^0.3.2",
+    "ngstorage": "^0.3.11"
   }
 }

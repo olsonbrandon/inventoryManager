@@ -1,0 +1,75 @@
+.bo-card {
+    display: inline-block;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 12px 8px 8px;
+    height: 15vw;
+    width: 28vw;
+    margin: 5px;
+}
+.bo-card .img{
+    position: absolute;
+    left: 190px;
+    top: 42px;
+    flex: 0 0 auto;
+    vertical-align: middle;
+    width: 152px;
+    height: auto;
+    float: right;
+}
+
+@media(max-width: 1338px){
+    .bo-card{
+        display: inline-block;
+        position: relative;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 12px 8px 8px;
+        height: 20vw;
+        width: 28vw;
+        margin: 5px;
+    }
+    .bo-card .img{
+        position: absolute;
+        left: 175px;
+        top: 72px;
+        flex: 0 0 auto;
+        vertical-align: middle;
+        width: 170px;
+        height: auto;
+        float: right;
+    }
+}
+.bo-card-main{
+    display: block;
+}
+.bo-card-actions{
+    display: block;
+    position: absolute;
+    bottom: 5px;
+}
+
+.bo-card .title{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.bo-card .subtext{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.bo-card .action1{
+    display: inline-block;
+    padding-top: .5vw;
+    padding-left: 1.5vw;
+}
+.bo-card .action2{
+    display: inline-block;
+    padding-top: .5vw;
+    padding-left: 3vw;
+}
+.bo-card .clickable{
+    cursor:pointer;
+}

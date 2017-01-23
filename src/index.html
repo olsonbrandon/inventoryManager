@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="app.css">
     <meta charset="utf-8">
-    <title>app</title>
+    <title>InventoryManager</title>
   </head>
-  <body ng-app="MyApp">
-    <a ui-sref="viewOne" ui-sref-active="active">View 1</a>
-    <a ui-sref="viewTwo" ui-sref-active="active">View 2</a>
+  <body class="clearfix" ng-app="InventoryManager" ng-controller="ParentController as parent">
+      <header class="nav">
+          <a ui-sref="products" ui-sref-active="active">Home</a>
+          <a ui-sref="signup" ng-if="!parent.loggedIn" ui-sref-active="active">Sign Up</a>
+          <a ui-sref="login" ng-if="!parent.loggedIn" ui-sref-active="active">Log In</a>
+          <button ng-if="parent.loggedIn" ng-click="parent.logout()">LOGOUT</button>
+      </header>
     <ui-view></ui-view>
+
+    <!-- Angular Core Dependencies -->
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <!-- 3rd Party Dependencies -->
+    <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+
+    <!-- Angular App -->
     <script src="app.min.js"></script>
   </body>
 </html>

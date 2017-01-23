@@ -1,5 +1,5 @@
 {
-  "name": "appseed",
+  "name": "inventoryManager",
   "version": "1.0.0",
   "description": "template for angularJS projects with two working views/gulp/bower/npm",
   "main": "index.js",
@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/olsonbrandon/appSeed#readme",
   "dependencies": {
-    "angular-ui-router": "^0.3.2"
   },
   "devDependencies": {
     "del": "^2.2.2",
