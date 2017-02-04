@@ -4,11 +4,11 @@
     .component('boCard',{
         templateUrl: 'views/card/boCard.html',
         bindings:{
-            title: '<',
+            ptitle: '<',
             subtext: '<',
             image: '<',
             onDetailsClick: '&',
-            onBuyClick: '&'
+            onCartClick: '&'
         },
         controller: function(){}
     });

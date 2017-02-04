@@ -50,17 +50,10 @@
             }
         })
         .state({
-            name: 'product-detail',
-            url: '/product/:productId',
-            templateUrl: 'views/productDetails.html',
-            controller: 'ProductDetailsController as pdc',
-            resolve: {
-                product: function(Product,$stateParams){
-                    return Product.getProductDetails($stateParams.productId).then(function(result){
-                        return result.data[0];
-                    });
-                }
-            }
+            name: 'checkout',
+            url: '/checkout',
+            templateUrl: 'views/checkout.html',
+            controller: 'CheckoutController as checkout'
         });
     });
 }());

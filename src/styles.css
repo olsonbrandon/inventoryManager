@@ -7,7 +7,69 @@
     height: 0;
 }
 .nav{
-    display: block;
+    display: inline-block;
     width: 100%;
     height: auto;
 }
+
+.details-info{
+    width: 50%;
+    display: block;
+    float: left;
+}
+
+.details-title{
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+.details-description{
+    padding-bottom: 15px;
+}
+.checkout-left{
+    display: inline;
+    max-width: 55vw;
+}
+.checkout-left .order-items{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+.checkout-left .checkout-titles{
+    border-bottom: 1px solid black;
+}
+.checkout-left .checkout-window{
+    border-bottom: 1px solid black;
+}
+.checkout-left .checkout-img{
+    align-items: center;
+    max-width: 148px;
+    max-height: auto;
+}
+.checkout-left .checkout-item-name{
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+    word-wrap: break-word;
+    padding-left: 20px;
+    padding-right: 25px;
+}
+.checkout-left .checkout-item-qty{
+    font-size: 18px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 25px;
+}
+.checkout-left .checkout-item-qty > input{
+    width: 50px;
+}
+.checkout-left .checkout-item-price{
+    font-size: 18px;
+    text-align: center;
+    padding-left: 30px;
+}
+.checkout-right{
+    display: inline;
+}
+
+/*iPad screen size portrait 768px*/

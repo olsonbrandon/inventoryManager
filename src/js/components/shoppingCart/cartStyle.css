@@ -1,0 +1,95 @@
+.dropdown{
+    display: inline-block;
+    float: right;
+    position:relative;
+    width:8%;
+    height:50px;
+    min-width:200px;
+    max-width:300px;
+}
+.nav .dropdown .dropbtn {
+    background-color: #3f51b5;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    display:block;
+    width:100%;
+}
+.cart-screen{
+    background-color: white;
+    position: absolute;
+    display: inline-block;
+    width: 25vw;
+    height: 20vw;
+    border: 1px solid black;
+    z-index: 1;
+    right:0px;
+    top:50px;
+    overflow-y: scroll;
+}
+.cartqty{
+    width: 100%;
+    background-color: #9ba1aa;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.item-window{
+    width: 100%;
+    border-bottom: 1px solid black;
+    height: 25%;
+}
+.cart-img{
+    float: left;
+    max-width: 25%;
+    max-height: 100%;
+}
+.cart-item-name{
+    float: left;
+    align-items: center;
+    max-width: 35%;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 15px;
+    word-wrap: break-word;
+}
+.cart-item-amt{
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.cart-item-price{
+    float: right;
+    max-width: 25%;
+    font-size: 10px;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+.total-cost{
+    text-align: center;
+    left: 0px;
+    bottom: 0px;
+    height: 30px;
+    width: 100%;
+    background: #9ba1aa;
+}
+.checkout{
+    margin-left: 5px;
+    margin-top: 3px;
+    border-radius: 5px;
+}
+.cart-holder{
+    width: 100%;
+    height: 49.7%;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 100px;
+}

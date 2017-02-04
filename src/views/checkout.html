@@ -1,0 +1,32 @@
+<div>
+    <div class="checkout-left">
+        <table class="order-items">
+            <thead>
+                <tr class="checkout-titles">
+                    <th colspan="2">Item Description</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody class="checkout-screen">
+                <tr ng-repeat="order in checkout.orders track by order.productId" class="checkout-window">
+                    <td>
+                        <img class="checkout-img" src="{{order.product.imgThumbnail}}">
+                    </td>
+                    <td class="checkout-item-name">
+                        {{order.product.name}}
+                    </td>
+                    <td class="checkout-item-qty">
+                        <input ng-model="order.amt" type="number" min="1"/>
+                    </td>
+                    <td class="checkout-item-price">
+                        {{(order.product.price * order.amt) | currency}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="checkout-right">
+        <button ng-click="checkout.clearCart()">Purchase Now!</button>
+    </div>
+</div>

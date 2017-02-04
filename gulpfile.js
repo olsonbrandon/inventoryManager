@@ -35,6 +35,11 @@
       .pipe(gulp.dest('dist/'));
   });
 
+  gulp.task('moveImg', function(){
+      return gulp.src('src/img/**.png')
+      .pipe(gulp.dest('./dist/img'));
+  });
+
   // gulp.task('uglifyScripts', ['concatScripts'], function(){
   //   return gulp.src('dist/app.js')
   //   .pipe(uglify())
@@ -86,10 +91,10 @@
   });
 
   gulp.task('watch', function(){
-    gulp.watch(['src/js/*.js', 'src/js/**/*.js', 'src/*.css', 'src/index.html', 'src/views/*.html','src/js/components/**/*.html','src/js/components/**/*.css'], ['concatScripts','moveHtml','moveIndex','concatCss']);
+    gulp.watch(['src/js/*.js', 'src/js/**/*.js', 'src/*.css', 'src/index.html', 'src/views/*.html','src/js/components/**/*.html', 'src/js/components/**/*.css', 'src/img/**.png'], ['concatScripts','moveHtml','moveIndex','concatCss', 'moveImg']);
   });
 
-  gulp.task('build', ['concatScripts','clearTempJs', 'moveHtml', 'moveIndex','concatCss', 'watch']);
+  gulp.task('build', ['concatScripts','clearTempJs', 'moveHtml', 'moveIndex','concatCss', 'moveImg', 'watch']);
 
   gulp.task('default', ['build', 'webserver']);
 }());

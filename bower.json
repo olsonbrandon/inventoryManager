@@ -16,6 +16,7 @@
   "dependencies": {
     "angular": "^1.5.9",
     "angular-ui-router": "^0.3.2",
-    "ngstorage": "^0.3.11"
+    "ngstorage": "^0.3.11",
+    "angular-material": "^1.1.1"
   }
 }

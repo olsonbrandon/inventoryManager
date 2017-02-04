@@ -1,0 +1,16 @@
+<div class="dropdown">
+    <button ng-click="cart.toggleShowCart()" class="dropbtn">Shopping Cart</button>
+    <div ng-show="cart.showCart" class="cart-screen">
+        <div class="cartqty">{{"You have " + cart.orders.length + " item" + (cart.orders.length !== 1 ? 's' : '') + " in your cart"}}</div>
+        <div ng-hide="cart.sumSubtotal() !==0" class="cart-holder">Go Buy Some Stuff Yo!</div>
+        <div ng-repeat="order in cart.orders track by order.productId" class="item-window">
+            <img src="{{order.product.imgThumbnail}}" class="cart-img">
+            <div class="cart-item-name">{{order.product.name}}</div>
+            <div class="cart-item-amt">{{order.amt}}</div>
+            <div class="cart-item-price">{{(order.product.price * order.amt) | currency}}</div>
+        </div>
+        <div class="total-cost"><strong>Subtotal: {{cart.subtotal | currency}}</strong>
+            <button ng-click="cart.checkoutClicked()" class="checkout">Checkout</button>
+        </div>
+    </div>
+</div>

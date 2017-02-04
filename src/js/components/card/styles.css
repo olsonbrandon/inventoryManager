@@ -1,3 +1,8 @@
+.card-container{
+    width: 90%;
+    margin: 10px auto;
+}
+
 .bo-card {
     display: inline-block;
     position: relative;
@@ -8,15 +13,74 @@
     width: 28vw;
     margin: 5px;
 }
+
+.card-boxes{
+    width: 30vw;
+}
+
 .bo-card .img{
     position: absolute;
     left: 190px;
-    top: 42px;
+    top: 65px;
     flex: 0 0 auto;
     vertical-align: middle;
     width: 152px;
     height: auto;
     float: right;
+}
+
+@media(max-width: 1700px){
+    .bo-card {
+        display: inline-block;
+        position: relative;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 12px 8px 8px;
+        height: 15vw;
+        width: 25vw;
+        margin: 5px;
+    }
+    .card-container {
+        width: 83%;
+        margin: 10px auto;
+    }
+    .bo-card .img{
+        position: absolute;
+        left: 175px;
+        top: 67px;
+        flex: 0 0 auto;
+        vertical-align: middle;
+        width: 170px;
+        height: auto;
+        float: right;
+    }
+}
+
+@media(max-width: 1448px){
+    .bo-card {
+        display: inline-block;
+        position: relative;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 12px 8px 8px;
+        height: 15vw;
+        width: 25vw;
+        margin: 5px;
+    }
+    .card-container {
+        width: 83%;
+        margin: 10px auto;
+    }
+    .bo-card .img{
+        position: absolute;
+        left: 175px;
+        top: 51px;
+        flex: 0 0 auto;
+        vertical-align: middle;
+        width: 170px;
+        height: auto;
+        float: right;
+    }
 }
 
 @media(max-width: 1338px){
@@ -30,6 +94,12 @@
         width: 28vw;
         margin: 5px;
     }
+
+    .card-container {
+        width: 65%;
+        margin: 10px auto;
+    }
+
     .bo-card .img{
         position: absolute;
         left: 175px;
@@ -41,6 +111,123 @@
         float: right;
     }
 }
+
+@media(max-width: 1190px){
+    .bo-card{
+        display: inline-block;
+        position: relative;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 12px 8px 8px;
+        height: 20vw;
+        width: 28vw;
+        margin: 5px;
+    }
+
+    .card-container {
+        width: 65%;
+        margin: 10px auto;
+    }
+
+    .bo-card .img{
+        position: absolute;
+        left: 135px;
+        top: 62px;
+        flex: 0 0 auto;
+        vertical-align: middle;
+        width: 140px;
+        height: auto;
+        float: right;
+    }
+}
+
+@media(max-width: 1011px){
+    .bo-card{
+        display: inline-block;
+        position: relative;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 12px 8px 8px;
+        height: 20vw;
+        width: 28vw;
+        margin: 5px;
+    }
+
+    .card-container {
+        width: 65%;
+        margin: 10px auto;
+    }
+
+    .bo-card .img{
+        position: absolute;
+        left: 135px;
+        top: 62px;
+        flex: 0 0 auto;
+        vertical-align: middle;
+        width: 100px;
+        height: auto;
+        float: right;
+    }
+}
+
+@media(max-width: 978px){
+    .bo-card{
+        display: inline-block;
+        position: relative;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 12px 8px 8px;
+        height: 20vw;
+        width: 28vw;
+        margin: 5px;
+    }
+
+    .card-container {
+        width: 65%;
+        margin: 10px auto;
+    }
+
+    .bo-card .img{
+        position: absolute;
+        left: 135px;
+        top: 76px;
+        flex: 0 0 auto;
+        vertical-align: middle;
+        width: 90px;
+        height: auto;
+        float: right;
+    }
+}
+
+@media(max-width: 825px){
+    .bo-card{
+        display: inline-block;
+        position: relative;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 12px 8px 8px;
+        height: 20vw;
+        width: 28vw;
+        margin: 5px;
+    }
+
+    .card-container {
+        width: 65%;
+        margin: 10px auto;
+    }
+
+    .bo-card .img{
+        position: absolute;
+        left: 135px;
+        top: 70px;
+        flex: 0 0 auto;
+        vertical-align: middle;
+        width: 90px;
+        height: auto;
+        float: right;
+    }
+}
+
 .bo-card-main{
     display: block;
 }
@@ -50,7 +237,7 @@
     bottom: 5px;
 }
 
-.bo-card .title{
+.bo-card .ptitle{
     font-size: 24px;
     line-height: 32px;
 }

@@ -23,7 +23,7 @@
             vm.creds = {};
         }
     }
-}());
+})();
 
 // email: randomemail8@gmail.com
 // password: random8

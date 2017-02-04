@@ -1,5 +1,30 @@
 <div>
-    <div>
-        <div class="detail-title">{{pdc.product.name}}</div>
-    </div>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+        <h2>{{pdc.product.name}}</h2>
+        <span flex></span>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <h2 class="details-title">{{pdc.product.name}}</h2>
+        <p class= "details-description">
+         <strong>Product Description: </strong>{{pdc.product.description}}
+        </p>
+        <p>
+          <strong>Price: </strong>${{pdc.product.price}}
+        </p>
+        <img style="margin: auto; max-width: 100%;" alt="Lush mango tree" ng-src="{{pdc.product.imgThumbnail}}">
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="pdc.onCartClick(pdc.product)">
+           Add to Cart
+      </md-button>
+      <md-button ng-click="pdc.checkout()">
+          Buy Now
+      </md-button>
+    </md-dialog-actions>
 </div>

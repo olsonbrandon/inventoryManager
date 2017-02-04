@@ -1,11 +1,11 @@
 <div class="bo-card">
     <div class="bo-card-main">
-        <div class="title">{{$ctrl.title}}</div>
+        <div class="ptitle">{{$ctrl.ptitle}}</div>
         <div class="subtext">${{$ctrl.subtext}}</div>
         <img class="img" ng-src="{{$ctrl.image}}"/>
     </div>
     <div class="bo-card-actions">
         <a class="action1 clickable" ng-click="$ctrl.onDetailsClick()()">More Details</a>
-        <a class="action2 clickable" ng-click="$ctrl.onBuyClick()()">Buy Now</a>
+        <a class="action2 clickable" ng-click="$ctrl.onCartClick()()">Add to Cart</a>
     </div>
 </div>
