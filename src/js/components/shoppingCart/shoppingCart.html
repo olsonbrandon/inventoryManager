@@ -3,7 +3,7 @@
     <div ng-show="cart.showCart" class="cart-screen">
         <div class="cartqty">{{"You have " + cart.orders.length + " item" + (cart.orders.length !== 1 ? 's' : '') + " in your cart"}}</div>
         <div ng-hide="cart.sumSubtotal() !==0" class="cart-holder">Go Buy Some Stuff Yo!</div>
-        <div ng-repeat="order in cart.orders track by order.productId" class="item-window">
+        <div ng-repeat="order in cart.orders track by order.id" class="item-window">
             <img src="{{order.product.imgThumbnail}}" class="cart-img">
             <div class="cart-item-name">{{order.product.name}}</div>
             <div class="cart-item-amt">{{order.amt}}</div>

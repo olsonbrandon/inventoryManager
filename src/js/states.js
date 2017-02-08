@@ -54,6 +54,12 @@
             url: '/checkout',
             templateUrl: 'views/checkout.html',
             controller: 'CheckoutController as checkout'
+        })
+        .state({
+            name: 'orderHistory',
+            url: '/orderHistory',
+            templateUrl: 'views/orderHistory.html',
+            controller: 'OrderHistoryController as history'
         });
     });
 }());

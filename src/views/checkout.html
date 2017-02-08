@@ -6,10 +6,11 @@
                     <th colspan="2">Item Description</th>
                     <th>Qty</th>
                     <th>Price</th>
+                    <th>Remove</th>
                 </tr>
             </thead>
             <tbody class="checkout-screen">
-                <tr ng-repeat="order in checkout.orders track by order.productId" class="checkout-window">
+                <tr ng-repeat="order in checkout.orders track by order.id" class="checkout-window">
                     <td>
                         <img class="checkout-img" src="{{order.product.imgThumbnail}}">
                     </td>
@@ -22,11 +23,14 @@
                     <td class="checkout-item-price">
                         {{(order.product.price * order.amt) | currency}}
                     </td>
+                    <td>
+                        <button ng-click="checkout.removeItem(order)">Remove Item</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div class="checkout-right">
-        <button ng-click="checkout.clearCart()">Purchase Now!</button>
+        <button ng-click="checkout.postOrder()">Purchase Now!</button>
     </div>
 </div>

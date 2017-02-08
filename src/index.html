@@ -2,17 +2,22 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="app.css">
-    <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.min.css"
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css">
     <meta charset="utf-8">
+
     <title>InventoryManager</title>
   </head>
   <body class="clearfix" ng-app="InventoryManager" ng-controller="ParentController as parent">
       <header class="nav">
-          <a ui-sref="products" ui-sref-active="active">Home</a>
-          <a ui-sref="signup" ng-if="!parent.loggedIn" ui-sref-active="active">Sign Up</a>
-          <a ui-sref="login" ng-if="!parent.loggedIn" ui-sref-active="active">Log In</a>
-          <button ng-if="parent.loggedIn" ng-click="parent.logout()">LOGOUT</button>
-          <bo-cart checkout="parent.toCheckout()" orders="parent.orders"></bo-cart>
+          <md-nav-bar md-selected-nav-item="currentLink" nav-bar-aria-label="navigation links">
+              <md-nav-item md-nav-sref="products" name="products">Home</md-nav-item>
+              <md-nav-item md-nav-sref="signup" name="signup" ng-if="!parent.loggedIn">Sign Up</md-nav-item>
+              <md-nav-item md-nav-sref="login" name="login" ng-if="!parent.loggedIn">Login</md-nav-item>
+              <md-nav-item md-nav-sref="orderHistory" name="orderHistory" ng-if="parent.loggedIn">Order History</md-nav-item>
+              <md-nav-item md-nav-click="parent.logout()" name="Logout" ng-if="parent.loggedIn">LOGOUT</md-nav-item>
+              <bo-cart checkout="parent.toCheckout()" orders="parent.orders"></bo-cart>
+          </md-nav-bar>
       </header>
     <ui-view></ui-view>
 
@@ -26,6 +31,7 @@
     <script src="bower_components/angular-aria/angular-aria.min.js"></script>
     <script src="bower_components/angular-material/angular-material.min.js"></script>
     <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- Angular App -->
     <script src="app.min.js"></script>
