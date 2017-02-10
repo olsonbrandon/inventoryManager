@@ -1,3 +1,29 @@
 <div>
     Look at all these Orders!
 </div>
+<table class="order-history-table">
+    <thead>
+        <tr class="history-titles">
+            <th>Date Ordered</th>
+            <th># of Items</th>
+            <th>Total Price</th>
+            <th>More Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="order in history.orders track by order.id">
+            <td>
+                {{order.date | date: "yyyy-MM-dd"}}
+            </td>
+            <td>
+                {{order.totalAmt}}
+            </td>
+            <td>
+                {{order.totalPrice | currency}}
+            </td>
+            <td>
+                <button ng-click="history.goToDetails(order.id)">More Info</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

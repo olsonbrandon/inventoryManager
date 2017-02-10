@@ -3,17 +3,15 @@
     angular.module('InventoryManager')
     .controller('OrderHistoryController', orderHistoryCtrl);
 
-    function orderHistoryCtrl(OrderHistory){
+    function orderHistoryCtrl(Transactions, $state, orders){
         var vm = this;
 
-        vm.getOrders = getOrders;
-        vm.getOrders();
+        vm.orders = orders;
+        vm.goToDetails = goToDetails;
 
-        function getOrders(){
-            OrderHistory.getOrders()
-            .then(function(response){
-                vm.orderedItems = response.data;
-                console.log(vm.orderedItems);
+        function goToDetails(id){
+            $state.go('transactionDetails', {
+                transId: id
             });
         }
     }

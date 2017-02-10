@@ -57,7 +57,7 @@
                     id: 1,
                     description: 'Sale'
                 },
-                date: $filter('date')(new Date(), 'yyyy-mm-dd'),
+                date: $filter('date')(new Date(), 'yyyy-MM-dd'),
                 subTransactions: service.orders.map(function(el){
                     el.qty = el.amt;
                     return el;

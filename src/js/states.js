@@ -59,7 +59,30 @@
             name: 'orderHistory',
             url: '/orderHistory',
             templateUrl: 'views/orderHistory.html',
-            controller: 'OrderHistoryController as history'
+            controller: 'OrderHistoryController as history',
+            resolve: {
+                orders: function(Transactions){
+                    return Transactions.getOrders().then(function(response){
+                        return response.data;
+                    });
+                }
+            }
+        })
+        .state({
+            name: 'transactionDetails',
+            url: '/transactionDetails/:transId',
+            templateUrl: 'views/transactionDetails.html',
+            controller: 'TransactionDetailController as trans',
+            resolve: {
+                transId: function($stateParams){
+                    return $stateParams.transId;
+                },
+                transaction: function($stateParams, Transactions){
+                    return Transactions.getTransaction($stateParams.transId).then(function(response){
+                        return response.data;
+                    });
+                }
+            }
         });
     });
 }());

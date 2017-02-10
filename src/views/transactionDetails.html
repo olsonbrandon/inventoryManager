@@ -1,0 +1,35 @@
+<div>
+    <table class="transaction-table">
+        <thead>
+            <tr class="transaction-titles">
+                <th>Product Name</th>
+                <th># Ordered</th>
+                <th>Price</th>
+                <th>Total Price</th>
+                <th>Return</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="product in trans.transaction.subTransactions">
+                <td>
+                    {{product.name}}
+                </td>
+                <td>
+                    {{product.summary.qty}}
+                </td>
+                <td>
+                    {{(product.totalPrice / product.summary.qty) | currency}}
+                </td>
+                <td>
+                    {{product.totalPrice | currency}}
+                </td>
+                <td>
+                    <button ng-click="">Return</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <strong>Total Order Cost</strong> {{trans.transaction.totalPrice | currency}}
+    </div>
+</div>
